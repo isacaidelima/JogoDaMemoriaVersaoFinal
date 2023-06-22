@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    background-image: url("../images/madeira.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    justify-content: center;
+}
+
+.grid {
+    display: grid;
+    /*aqui definiremos quantas colunas de cartas vamos ter:*/
+    grid-template-columns: 200px 200px 200px  200px 200px 200px;
+    justify-content: center;
+    /*gap vai dar um espaçamenti entre cada grid*/
+    gap: 15px;
+    width: 100%;
+    max-width: 800px;
+    margin: 5vh auto;
+}
+
+.card {
+    /*o aspect ratio ajuda a manter uma proporção para a carta para que não fique mudando conforme o tamanho da tela*/
+    aspect-ratio: 3/4;
+    width: 100%;
+    border-radius: 5px;
+    position: relative;
+    /* Aqui definiremos o tempo de rotação da carta*/
+    transition: all 400ms ease;
+    transform-style: preserve-3d;
+}
+
+/*com isso, podemos usar as mesmas configurações de css para todas as cartas*/
+.face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid  whitesmoke;
+    border-radius: 5px;
+}
+
+/*O back vamos deixar uma imagem fixa e no front precisamos que cada carta seja diferente*/
+.front {
+    transform: rotateY(180deg);
+}
+
+.back {
+    background-image: url('../images/layoutback.png');
+    /*Ao esconder o back face, estamos fazendo que a outra parte da carta apareça o face*/
+    backface-visibility: hidden;
+}
+
+/*efeito para revelar a carta*/
+.reveal-card {
+    transform: rotateY(180deg);
+}

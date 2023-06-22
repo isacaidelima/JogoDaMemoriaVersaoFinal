@@ -1,0 +1,29 @@
+/* aqui vai uma configuração para todo o header*/
+.login-form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url("../images/fundotelainicial.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    justify-content: center;
+}
+
+/* aqui vai uma configuração para o botão "play"*/
+.login_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-color: #A17648;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5em;
+    max-width: 300px;
+    height: 6.5vh;
+    padding: 15px;
+    width: 100%;
+    margin-top: 3vh;
+}
